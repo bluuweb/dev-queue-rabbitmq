@@ -14,7 +14,7 @@ async function consume(queue: string) {
     // 2. Crear un canal
     const channel = await connection.createChannel();
 
-    // 3. Asegurarse de que la cola existe
+    // 3. Declarar la cola
     await channel.assertQueue(queue);
 
     // 4. Consumir mensajes de la cola
